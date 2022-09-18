@@ -1,0 +1,19 @@
+#test용 yml(운영소스 yml과 설정을 다르게 할 수 있음)
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      #test용이기 때문에 마지막에 어플리케이션 종료 시점에 데이터 초기화
+    properties:
+      hibernate:
+        format_sql: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
