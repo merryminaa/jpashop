@@ -9,7 +9,6 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
-//실무에서는 사실 Setter는 사용X
 public class Member {
 
     @Id @GeneratedValue
