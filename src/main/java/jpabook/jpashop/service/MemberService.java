@@ -49,6 +49,19 @@ public class MemberService {
         return memberRepository.findOne(id);
     }
 
+    /**
+     * 회원 수정
+     * **/
+    @Transactional
+    public void update(Long id, String name) {
+        Member member = memberRepository.findOne(id);
+        member.setName(name);
+        //커맨드와 쿼리 메소드를 분리
+        //데이터가 변경되는 경우에는 결과 객체(영속상태가 끊긴)를 다시 넘기지 않음
+        //필요시 변경된 데이터의 id 정도 리턴해줌
+    }
+
+
 }
 
 

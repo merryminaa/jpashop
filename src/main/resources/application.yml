@@ -6,11 +6,11 @@ spring:
     driver-class-name: org.h2.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     properties:
       hibernate:
-#        show_sql: true //system.out보다는 아래 logger를 통해서 찍어야함
         format_sql: true
+#        show_sql: true //system.out보다는 아래 logger를 통해서 찍어야함
 logging:
   level:
     org.hibernate.SQL: debug
