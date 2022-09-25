@@ -4,12 +4,15 @@ import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderStatus;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Data
+@Repository
+@RequiredArgsConstructor
 public class OrderSimpleQueryRepository {
 
     private final EntityManager em;
